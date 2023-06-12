@@ -26,10 +26,40 @@ body {
 .aside {
   background-color: var(--main);
   display: none;
+  color: var(--light);
+  padding: 25px;
+}
+
+ul {
+  list-style-type: none;
+}
+
+.aside-header {
+  display: flex;
+  gap: 30px;
+}
+
+.aside-item {
+  display: flex;
+  align-items: center;
+  gap: 30px;
+  margin-bottom: 20px;
+}
+
+a:link,
+a:visited {
+  color: var(--light);
+  text-decoration: none;
+  font-weight: 700;
 }
 
 .main {
   background-color: var(--background-color);
+}
+
+img {
+  width: 30px;
+  color: var(--light);
 }
 
 @media (min-width: 650px) {
@@ -40,8 +70,10 @@ body {
   }
 
   .aside {
-    display: block;
+    display: flex;
     grid-column: 1 / 2;
     grid-row: 1 / -1;
+    flex-direction: column;
+    gap: 30px;
   }
 }
